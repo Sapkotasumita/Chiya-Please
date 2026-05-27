@@ -67,7 +67,7 @@ export function DashboardHeader({ user }: { user: User }) {
               alt="चिया Please!"
               width={32}
               height={32}
-              className="rounded-full w-auto h-auto"
+              className="rounded-md border border-[var(--chiya-bamboo)]/50 shadow-sm bg-[var(--chiya-warm)] object-cover w-8 h-8"
             />
           </div>
 

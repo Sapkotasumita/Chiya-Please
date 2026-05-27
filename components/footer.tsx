@@ -14,7 +14,7 @@ export function Footer() {
                 alt="चिया Please!"
                 width={60}
                 height={60}
-                className="rounded-full bg-[var(--chiya-cream)] p-1"
+                className="rounded-xl border-2 border-[var(--chiya-bamboo)]/50 shadow-md bg-[var(--chiya-warm)] p-0.5 object-cover w-[60px] h-[60px]"
               />
               <div>
                 <h3 className="font-serif text-xl">चिया Please!</h3>

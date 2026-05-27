@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: 'चिया Please! | Time Pauses Here',
   description: 'A cozy place to enjoy authentic Nepali chiya, delicious snacks, and relaxing moments with friends.',
   keywords: ['Nepali tea', 'chiya', 'tea shop', 'cafe', 'snacks', 'momo', 'samosa'],
+  icons: {
+    icon: '/images/logo.png',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
 }
 
 export default function RootLayout({

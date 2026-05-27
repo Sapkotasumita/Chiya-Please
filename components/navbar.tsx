@@ -46,7 +46,7 @@ export function Navbar() {
               alt="चिया Please!"
               width={40}
               height={40}
-              className="rounded-full object-contain w-10 h-10"
+              className="rounded-md border border-[var(--chiya-bamboo)]/50 shadow-sm bg-[var(--chiya-warm)] object-cover w-10 h-10"
               priority
             />
             <span className="font-serif font-bold text-lg text-[var(--chiya-brown)] hidden sm:block">

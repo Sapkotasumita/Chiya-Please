@@ -35,7 +35,7 @@ export function DashboardSidebar() {
               alt="चिया Please!"
               width={48}
               height={48}
-              className="rounded-full w-auto h-auto"
+              className="rounded-lg border-2 border-[var(--chiya-bamboo)]/50 shadow-md bg-[var(--chiya-warm)] p-0.5 object-cover w-12 h-12"
             />
             <div>
               <h1 className="font-serif text-lg text-primary font-semibold">चिया Please!</h1>

@@ -93,25 +93,31 @@ export function Gallery() {
         {/* Lightbox */}
         {selectedImage !== null && (
           <div
-            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/85 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-all duration-300 animate-in fade-in"
             onClick={() => setSelectedImage(null)}
           >
             <button
-              className="absolute top-4 right-4 text-white hover:text-[var(--chiya-bamboo)] transition-colors"
+              className="absolute top-6 right-6 text-white/80 hover:text-[var(--chiya-bamboo)] hover:scale-110 transition-all duration-200 z-10"
               onClick={() => setSelectedImage(null)}
+              aria-label="Close gallery"
             >
-              <X size={32} />
+              <X size={36} />
             </button>
-            <div className="max-w-4xl max-h-[90vh] bg-[var(--chiya-warm)] rounded-xl p-4 shadow-2xl">
-              <div className="relative w-full h-[60vh] md:h-[70vh] rounded-lg overflow-hidden">
+            <div 
+              className="relative w-full max-w-3xl bg-[var(--chiya-warm)] rounded-2xl p-3 md:p-4 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] border border-[var(--chiya-bamboo)]/20 animate-in zoom-in-95 duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative w-full overflow-hidden rounded-xl">
                 <Image
                   src={galleryImages[selectedImage].src}
                   alt={galleryImages[selectedImage].alt}
-                  fill
-                  className="object-contain"
+                  width={1200}
+                  height={900}
+                  className="w-full h-auto max-h-[70vh] object-contain rounded-lg shadow-inner bg-black/5"
+                  priority
                 />
               </div>
-              <p className="text-center text-[var(--chiya-brown)] mt-4 font-medium">
+              <p className="text-center text-[var(--chiya-brown)] mt-3 md:mt-4 font-serif text-base md:text-lg italic px-4 select-none">
                 {galleryImages[selectedImage].alt}
               </p>
             </div>

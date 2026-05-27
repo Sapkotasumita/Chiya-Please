@@ -23,10 +23,10 @@ export function Hero() {
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           {/* Logo Area */}
-          <div className="relative mb-10">
+          <div className="relative mb-10 group">
             {/* Floating Leaves */}
             <svg
-              className="absolute -left-16 -top-10 w-20 h-20 text-green-300 opacity-60 animate-pulse rotate-[-25deg]"
+              className="absolute -left-12 -top-6 w-20 h-20 text-[var(--chiya-leaf)] opacity-40 animate-pulse rotate-[-35deg] transition-all duration-500 group-hover:rotate-[-20deg] group-hover:scale-110 drop-shadow-md"
               viewBox="0 0 100 100"
               fill="currentColor"
             >
@@ -34,28 +34,31 @@ export function Hero() {
             </svg>
 
             <svg
-              className="absolute -right-16 -top-10 w-20 h-20 text-green-300 opacity-60 animate-pulse rotate-[25deg]"
+              className="absolute -right-12 -top-6 w-20 h-20 text-[var(--chiya-leaf)] opacity-40 animate-pulse rotate-[35deg] transition-all duration-500 group-hover:rotate-[20deg] group-hover:scale-110 drop-shadow-md"
               viewBox="0 0 100 100"
               fill="currentColor"
             >
               <path d="M50 5C30 20 10 50 10 70C10 90 30 95 50 95C70 95 90 90 90 70C90 50 70 20 50 5Z" />
             </svg>
 
-            {/* Logo Card */}
-            <div className="flex justify-center mb-6">
-              <Image
-                src="/images/logo.png"
-                alt="Chiya Please"
-                width={170}
-                height={170}
-                className="drop-shadow-xl"
-              />
+            {/* Logo Card Container with Rounded Bamboo Border and Premium Shadow */}
+            <div className="relative flex justify-center mb-6">
+              <div className="relative overflow-hidden rounded-[2.5rem] border-[6px] border-[var(--chiya-bamboo)] shadow-[0_15px_35px_rgba(107,62,38,0.3)] bg-[var(--chiya-warm)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_20px_45px_rgba(107,62,38,0.4)]">
+                <Image
+                  src="/images/logo.png"
+                  alt="Chiya Please"
+                  width={170}
+                  height={170}
+                  className="object-cover w-[170px] h-[170px]"
+                  priority
+                />
+              </div>
 
               {/* Steam Animation */}
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex gap-2">
-                <span className="w-2 h-10 bg-white/40 rounded-full animate-steam"></span>
-                <span className="w-2 h-8 bg-white/40 rounded-full animate-steam delay-200"></span>
-                <span className="w-2 h-10 bg-white/40 rounded-full animate-steam delay-500"></span>
+              <div className="absolute -top-10 left-1/2 -translate-x-1/2 flex gap-2.5 z-10 pointer-events-none">
+                <span className="w-2.5 h-12 bg-amber-100/35 rounded-full animate-steam"></span>
+                <span className="w-2.5 h-9 bg-amber-100/35 rounded-full animate-steam delay-200"></span>
+                <span className="w-2.5 h-12 bg-amber-100/35 rounded-full animate-steam delay-500"></span>
               </div>
             </div>
           </div>

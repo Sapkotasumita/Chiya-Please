@@ -62,7 +62,7 @@ export default function LoginPage() {
                 alt="चिया Please!"
                 width={100}
                 height={100}
-                className="rounded-full w-auto h-auto"
+                className="rounded-2xl border-[3px] border-[var(--chiya-bamboo)] shadow-lg bg-[var(--chiya-warm)] p-0.5 object-cover w-[100px] h-[100px]"
               />
             </div>
             <CardTitle className="text-2xl font-serif text-primary">Admin Login</CardTitle>
